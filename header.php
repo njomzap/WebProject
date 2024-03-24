@@ -4,14 +4,43 @@
     $settings = $site->getSiteSettings();
 ?>
 <header>
-    <a href="index.html" class="logo">Furniture Store</a>
+    <a href="index.php" class="logo">Furniture Store</a>
     <nav>
         <ul>
-        <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login / Register</a></li>
+            <?php 
+            if ($settings['show_home']) {
+                echo '<li><a href="index.php">Home</a></li>';
+            }
+            ?>
+            <?php 
+            if ($settings['show_shop']) {
+                echo '<li><a href="shop.php">Shop</a></li>';
+            }
+            ?>
+            <?php 
+            if ($settings['show_contact']) {
+                echo '<li><a href="contact.php">Contact</a></li>';
+            }
+            ?>
+            <?php 
+            if ($settings['show_about']) {
+                echo '<li><a href="about.php">About Us</a></li>';
+            }
+            ?>
+            
+            
+            <?php
+            if( isset($_SESSION['user_email']) ) {
+                echo '<li><a href="add-post.php">Add post</a></li>';
+                echo '<li><a href="dashboard.php">Dashboard</a></li>';
+                echo '<li><a href="./classes/logout.php">Logout</a></li>';
+            }
+            ?>
+            <?php
+            if( ! isset($_SESSION['user_email']) ) {
+                echo '<li><a href="login.php">Login / Register</a></li>';
+            }
+            ?>
         </ul>
     </nav>
     <button id="mobileMenuIcon">
