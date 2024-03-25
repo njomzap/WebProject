@@ -586,4 +586,143 @@ input[type="file"] {
 }
 
 
+/* Mobile styles */
+@media screen and (max-width: 1200px) {
+    .home-banner {
+        height: 60vh;
+    }
+    .banner-image img {
+        width: 350px;
+        max-height: 350px;
+        object-fit: contain;
+    }
+    .banner-text h3 {
+        font-size: 50px;
+        margin-top: 0;
+    }
 
+    .home-banner .slide {
+        flex-direction: column;
+    }
+
+    .home-banner .prev {
+        left: 0;
+    }
+
+    .home-banner .next {
+        right: 0;
+    }
+
+
+    #mobileMenuIcon {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background: #fff;
+        left: 0;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .post-page-wrapper {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .post-wrapper {
+        width: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-banner {
+        height: 50vh;
+    }
+    .banner-text h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .banner-image img {
+        width: 90%;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .about-us-wrapper .our-team {
+        display: block;
+        padding: 10px;
+    }
+
+    .post-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .home-banner .banner-image {
+        background-size: 300px;
+    }
+
+    .banner-text h3 {
+        font-size: 1.5em;
+    }
+
+    .products-wrapper {
+        flex-direction: column;
+    }
+
+    .product {
+        width: auto;
+    }
+
+    .product img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .footer {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    .form-section, .contact-form-section {
+        max-width: 280px;
+    }
+
+    .form-container input, .contact-form-container input, .contact-form-container textarea {
+        font-size: 14px;
+    }
+}
