@@ -42,4 +42,7 @@ if (isset($_POST['save_changes'])) {
 
     header("Location: ../dashboard.php");
     exit;
+} else {
+    header("Location: ../error_page.php");
+    exit;
 }
